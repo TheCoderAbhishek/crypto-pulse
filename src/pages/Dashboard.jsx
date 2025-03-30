@@ -31,9 +31,8 @@ function Dashboard() {
 
     getMarketData();
 
-    // Optional: Real-time updates (polling - adjust interval as needed)
     const intervalId = setInterval(getMarketData, 15000);
-    return () => clearInterval(intervalId); // Cleanup on unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   useEffect(() => {
@@ -70,7 +69,6 @@ function Dashboard() {
           Real-Time Cryptocurrency Prices
         </h1>
 
-        {/* Optional Search Bar */}
         <div className="mb-4">
           <CryptoSearch searchTerm={searchTerm} onSearch={handleSearch} />
         </div>
